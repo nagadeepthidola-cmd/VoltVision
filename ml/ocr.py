@@ -12,7 +12,12 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 # TESSERACT OCR LOCATION (WINDOWS)
 # --------------------------------------------------
 pytesseract.pytesseract.tesseract_cmd = (
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    os.getenv("TESSERACT_CMD")
+    or (
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        if os.name == "nt"
+        else "/usr/bin/tesseract"
+    )
 )
 
 
