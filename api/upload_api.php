@@ -1,0 +1,1 @@
+<?php // PHP endpoint to accept bill uploads. ?>\n

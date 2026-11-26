@@ -1,0 +1,1 @@
+<?php // Appliance selection and usage hours module placeholder. ?>\n

@@ -1,0 +1,16 @@
+.env
+uploads/bills/*
+!uploads/bills/README.txt
+__pycache__/
+*.pyc
+.venv/
+venv/
+check_db.php
+ml/input.json
+dashboard.zip
+predict_bill.zip
+ml/appliance_electricity_model.pkl
+ml/electricity_model.pkl
+ml/*.pkl
+
+ml/*.pkl

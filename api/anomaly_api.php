@@ -1,0 +1,1 @@
+<?php // Endpoint to return anomaly-detection results. ?>\n

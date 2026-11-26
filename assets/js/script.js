@@ -1,0 +1,1 @@
+// VoltVision shared JavaScript goes here.\n

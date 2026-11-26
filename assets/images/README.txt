@@ -1,0 +1,1 @@
+Place your VoltVision logo and project images in this folder.\n

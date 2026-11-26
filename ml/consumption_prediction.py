@@ -1,0 +1,1 @@
+# Random Forest consumption prediction module placeholder.\n

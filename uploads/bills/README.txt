@@ -1,0 +1,1 @@
+Uploaded electricity bill images will be stored here. Configure upload validation and access controls before deployment.\n

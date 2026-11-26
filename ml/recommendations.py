@@ -1,0 +1,1 @@
+# Energy-saving recommendations module placeholder.\n
