@@ -1,4 +1,3 @@
-
 <?php
 $host = getenv("DB_HOST") ?: "localhost";
 $dbname = getenv("DB_NAME") ?: "wattwise_db";
