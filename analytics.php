@@ -43,6 +43,7 @@ if ($stmt) {
 }
 
 // MONTHLY ANALYTICS
+// MONTHLY ANALYTICS
 $monthly_sql = "SELECT
     DATE_FORMAT(created_at, '%Y-%m') AS month_key,
     DATE_FORMAT(created_at, '%b %Y') AS month_label,
@@ -51,9 +52,12 @@ $monthly_sql = "SELECT
     COALESCE(AVG(predicted_bill), 0) AS average_bill
     FROM predictions
     WHERE user_id = ?
-    GROUP BY DATE_FORMAT(created_at, '%Y-%m')
+    GROUP BY
+        DATE_FORMAT(created_at, '%Y-%m'),
+        DATE_FORMAT(created_at, '%b %Y')
     ORDER BY month_key ASC";
 
+$stmt = $conn->prepare($monthly_sql);
 $stmt = $conn->prepare($monthly_sql);
 
 $labels = [];
