@@ -1317,6 +1317,22 @@ body {
     </a>
 </div>
 
+<div class="feature-card">
+    <div class="feature-icon">🚨</div>
+
+    <h3>Anomaly Detection</h3>
+
+    <p>
+        Detect unusual electricity consumption
+        using Machine Learning.
+    </p>
+
+    <a href="analytics/anomaly_detection.php" class="explore">
+        Explore →
+    </a>
+</div>
+
+
 
         </div>
 
