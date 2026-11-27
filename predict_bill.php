@@ -209,24 +209,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 
-    if (!$error) {
+if (!$error) {
 
-        $month = (int)$values["month"];
-        $year = (int)date("Y");
+    $month = (int)$values["month"];
+    $year = (int)date("Y");
 
-       $$daysInMonth = (int) date('t', strtotime("$year-$month-01"));
+    // Calculate number of days in selected month
+    $daysInMonth = (int) date('t', strtotime("$year-$month-01"));
 
-        $city = trim($values["city"]);
-        $company = trim($values["company"]);
-        $tariff = (float)$values["tariff_rate"];
+    $city = trim($values["city"]);
+    $company = trim($values["company"]);
+    $tariff = (float)$values["tariff_rate"];
 
-        $inputData = [
-            "Month" => $month,
-            "DaysInMonth" => $daysInMonth,
-            "City" => $city,
-            "Company" => $company,
-            "TariffRate" => $tariff
-        ];
+    $inputData = [
+        "Month" => $month,
+        "DaysInMonth" => $daysInMonth,
+        "City" => $city,
+        "Company" => $company,
+        "TariffRate" => $tariff
+    ];
 
         $monthlyHours = 0.0;
         $estimated_units = 0.0;
