@@ -237,7 +237,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                         previous_reading
                                     )
                                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                                // Reconnect after OCR processing before saving the bill
+                                $conn = createDbMysqliConnection();
 
+                                $stmt = $conn->prepare($sql);
                                 $stmt = $conn->prepare($sql);
 
                                 if (!$stmt) {

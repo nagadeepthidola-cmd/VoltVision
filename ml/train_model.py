@@ -8,7 +8,11 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_error, r2_score
+from sklearn.metrics import (
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score
+)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATASET_PATH = os.path.join(BASE_DIR, "appliance_dataset.csv")
@@ -109,12 +113,17 @@ def main():
 
     mae = mean_absolute_error(y_test, predictions)
     r2 = r2_score(y_test, predictions)
+    mse = mean_squared_error(y_test, predictions)
+    rmse = np.sqrt(mse)
     print("\n===== APPLIANCE MODEL RESULTS =====")
     print("Training rows:", len(X_train))
     print("Testing rows:", len(X_test))
-    print("MAE (synthetic test data):", round(mae, 2))
-    print("R2 Score (synthetic test data):", round(r2, 4))
 
+    print("MAE:", round(mae, 2))
+    print("MSE:", round(mse, 2))
+    print("RMSE:", round(rmse, 2))
+    print("R2 Score:", round(r2, 4))
+    print("R2 Score Percentage:", round(r2 * 100, 2), "%")
     names = pipeline.named_steps["preprocessing"].get_feature_names_out()
     importance = pipeline.named_steps["model"].feature_importances_
     importance_df = pd.DataFrame({"Feature": names, "Importance": importance})
