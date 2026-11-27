@@ -171,10 +171,11 @@ $generalTips = [
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #263238;
+    background: #f0f4ff;
+    color: #1e293b;
     padding: 30px 15px;
 }
 
@@ -189,17 +190,17 @@ body {
 }
 
 .header h1 {
-    color: #176b45;
+    color: #1d4ed8;
     margin-bottom: 10px;
 }
 
 .header p {
-    color: #667085;
+    color: #64748b;
 }
 
 .section-title {
     margin: 28px 0 16px;
-    color: #176b45;
+    color: #1d4ed8;
     font-size: 22px;
 }
 
@@ -210,16 +211,17 @@ body {
 }
 
 .card {
-    background: white;
+    background: #ffffff;
     padding: 22px;
     border-radius: 14px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-    border-left: 4px solid #20a36a;
-    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.10);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(37, 99, 235, 0.15);
 }
 
 .icon {
@@ -229,11 +231,11 @@ body {
 
 .card h3 {
     margin-bottom: 10px;
-    color: #176b45;
+    color: #1d4ed8;
 }
 
 .card p {
-    color: #667085;
+    color: #64748b;
     line-height: 1.6;
 }
 
@@ -241,29 +243,41 @@ body {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 16px;
-    background: #198754;
-    color: white;
+    background: #2563eb;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 7px;
+    transition: background 0.2s;
 }
 
 .card a:hover {
-    background: #146c43;
+    background: #1d4ed8;
 }
 
 .back-btn {
     display: inline-block;
     margin-top: 30px;
     padding: 12px 20px;
-    background: #263238;
-    color: white;
+    background: #1e3a8a;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 7px;
 }
 
 .back-btn:hover {
-    background: #111827;
+    background: #1e40af;
 }
+
+@media(max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .section-title {
+        font-size: 19px;
+    }
+}
+
 
 @media(max-width:600px) {
 
