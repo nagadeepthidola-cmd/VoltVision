@@ -214,11 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $month = (int)$values["month"];
         $year = (int)date("Y");
 
-        $daysInMonth = cal_days_in_month(
-            CAL_GREGORIAN,
-            $month,
-            $year
-        );
+       $$daysInMonth = (int) date('t', strtotime("$year-$month-01"));
 
         $city = trim($values["city"]);
         $company = trim($values["company"]);
