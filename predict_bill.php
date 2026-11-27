@@ -1176,33 +1176,7 @@ select option {
             </div>
 
         <?php endif; ?>
-        <div class="model-performance">
-    <h2>🤖 ML Model Performance</h2>
-
-    <div class="metrics-grid">
-
-        <div class="metric">
-            <h3>98.24%</h3>
-            <p>R² Score</p>
-        </div>
-
-        <div class="metric">
-            <h3>₹587.79</h3>
-            <p>MAE</p>
-        </div>
-
-        <div class="metric">
-            <h3>₹793.80</h3>
-            <p>RMSE</p>
-        </div>
-
-    </div>
-
-    <p style="color:#8da3b5; font-size:11px; margin-top:15px;">
-        Evaluated on 6,000 synthetic test records.
-        These are offline model evaluation results, not live prediction accuracy.
-    </p>
-</div>
+        
         <div class="info-note">
             <strong>ℹ Important Note:</strong>
             The estimated amount is calculated as estimated units multiplied
