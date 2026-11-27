@@ -1287,11 +1287,11 @@ body {
             </a>
 
             <a href="my_predictions.php" class="feature-card">
-                <span class="feature-icon">📊</span>
-                <h3>Track Your Energy Usage</h3>
-                <p>View your prediction history and usage.</p>
-                <span class="explore">Explore →</span>
-            </a>
+    <span class="feature-icon">📊</span>
+    <h3>My Prediction History</h3>
+    <p>View your previous electricity bill predictions and usage details.</p>
+    <span class="explore">Explore →</span>
+</a>
 
             <a href="analytics.php" class="feature-card">
                 <span class="feature-icon">🌱</span>
