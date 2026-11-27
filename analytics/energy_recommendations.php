@@ -1,4 +1,3 @@
-
 <?php
 // IMPORTANT: Save this file as UTF-8 without BOM.
 // Do not put spaces or blank lines before this PHP opening tag.
