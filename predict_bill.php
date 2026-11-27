@@ -907,6 +907,48 @@ select option {
         font-size: 32px;
     }
 }
+.model-performance {
+    margin-top: 25px;
+    padding: 25px;
+    background: linear-gradient(135deg, #142c32, #102438);
+    border: 1px solid #00d9ff;
+    border-radius: 16px;
+}
+
+.model-performance h2 {
+    color: #00d9ff;
+    margin-bottom: 18px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.metric {
+    background: #0b1726;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.metric h3 {
+    color: #00f59b;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.metric p {
+    color: #a8bfce;
+    font-size: 12px;
+}
+
+@media(max-width: 600px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -1124,6 +1166,7 @@ select option {
             </div>
 
         <?php endif; ?>
+        
 
         <?php if ($error): ?>
 
@@ -1133,7 +1176,33 @@ select option {
             </div>
 
         <?php endif; ?>
+        <div class="model-performance">
+    <h2>🤖 ML Model Performance</h2>
 
+    <div class="metrics-grid">
+
+        <div class="metric">
+            <h3>98.24%</h3>
+            <p>R² Score</p>
+        </div>
+
+        <div class="metric">
+            <h3>₹587.79</h3>
+            <p>MAE</p>
+        </div>
+
+        <div class="metric">
+            <h3>₹793.80</h3>
+            <p>RMSE</p>
+        </div>
+
+    </div>
+
+    <p style="color:#8da3b5; font-size:11px; margin-top:15px;">
+        Evaluated on 6,000 synthetic test records.
+        These are offline model evaluation results, not live prediction accuracy.
+    </p>
+</div>
         <div class="info-note">
             <strong>ℹ Important Note:</strong>
             The estimated amount is calculated as estimated units multiplied
